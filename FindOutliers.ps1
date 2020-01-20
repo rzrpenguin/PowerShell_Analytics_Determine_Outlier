@@ -1,5 +1,5 @@
-$array = 10,23,21,13,16,72,25,10,23,21,13,16,85,73,19,109;
-$array = $array | Sort-Object;
+param($inputArray, [double]$inputValue);
+$inputArray = $inputArray | Sort-Object;
 $arrayLength = ($array | Measure-Object).Count;
 if((([System.Math]::Round(($arrayLength/2)))*2) -eq $arrayLength){
 	##Even
@@ -105,3 +105,29 @@ $outerFenceEnd = $q3ArrayMedian+$outerFenceI;
 
 "$innerFenceStart,$innerFenceEnd";
 "$outerFenceStart,$outerFenceEnd";
+
+if($inputValue -ge $outerFenceStart -or $inputValue -le $outerFenceEnd){
+	##Inside Outer Fence
+	$placement = "Inside Outer Fence";
+}
+if($inputValue -lt $innerFenceStart -or $inputValue -gt $innerFenceEnd){
+	##Outside Inner Fence
+	$placement = "Outside Inner Fence";
+}
+
+if($inputValue -ge $innerFenceStart -and $inputValue -le $innerFenceEnd){
+	$placement = "Inside Inner Fence";
+	Write-Output $placement;
+}
+if($inputValue -lt $innerFenceStart -or $inputValue -gt $innerFenceEnd -and $inputValue -lt $outerFenceStart){
+	$placement = "Outside Inner Fence";
+	Write-Output $placement;
+}
+if($inputValue -ge $OuterFenceStart -and $inputValue -le $OuterFenceEnd -and $inputValue -gt $innerFenceEnd){
+	$placement = "Inside Outer Fence";
+	Write-Output $placement;
+}
+if($inputValue -lt $OuterFenceStart -and $inputValue -gt $outerFenceEnd -or $inputValue -gt $OuterFenceEnd){
+	$placement = "Outside Outer Fence";
+	Write-Output $placement;
+}
