@@ -106,15 +106,6 @@ $outerFenceEnd = $q3ArrayMedian+$outerFenceI;
 "$innerFenceStart,$innerFenceEnd";
 "$outerFenceStart,$outerFenceEnd";
 
-if($inputValue -ge $outerFenceStart -or $inputValue -le $outerFenceEnd){
-	##Inside Outer Fence
-	$placement = "Inside Outer Fence";
-}
-if($inputValue -lt $innerFenceStart -or $inputValue -gt $innerFenceEnd){
-	##Outside Inner Fence
-	$placement = "Outside Inner Fence";
-}
-
 if($inputValue -ge $innerFenceStart -and $inputValue -le $innerFenceEnd){
 	$placement = "Inside Inner Fence";
 	Write-Output $placement;
