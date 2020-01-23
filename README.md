@@ -4,9 +4,9 @@ PowerShell script for analyzing a set of numbers and finding if the input value 
 </br>
 **Example of comparing the input value to the inner fence:**
 </br>
-.\DetectOutliers.ps1 -inputArray $array -inputValue '100'
+.\FindOutliers.ps1 -inputArray $array -inputValue '100'
 </br>
 </br>
 **Example of comparing the input value to the outer fence:**
 </br>
-.\DetectOutliers.ps1 -inputArray $array -inputValue '100' -useOuterFence $True
+.\FindOutliers.ps1 -inputArray $array -inputValue '100' -useOuterFence $True
