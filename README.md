@@ -1,4 +1,4 @@
-# PowerShell_Analytics_Find_Outliers
+# PowerShell_Analytics_Determine_Outlier
 PowerShell script for analyzing a set of numbers and finding if the input value is an outlier using interquartile range.
 </br>
 </br>
