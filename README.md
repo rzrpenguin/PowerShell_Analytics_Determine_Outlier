@@ -19,7 +19,6 @@ Inner Fence End: 104.5
 </br>
 
 **Example of comparing the input value to the outer fence:**
-
 </br>
 
 ```PowerShell
