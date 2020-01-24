@@ -27,7 +27,7 @@ $array = 10,23,21,13,16,72,25,10,23,21,13,16,85,73,19,109
 ```
 
 ```
-Inner Fence Start: -39.5
-Inner Fence End: 104.5
+Outer Fence Start: -93.5
+Outer Fence End: 158.5
 175 is outside Outer Fence
 ```
